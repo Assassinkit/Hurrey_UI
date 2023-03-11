@@ -1,0 +1,99 @@
+.avatar-rounded {
+  width: 170px;
+  height: 170px;
+  background-color: lightgray;
+  border-radius: 50%;
+  border: 1px solid red;
+}
+
+button.room-button {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  padding: 1rem 2.25rem;
+  border-radius: 1000px;
+
+  border: none;
+  position: relative;
+  background: #343434;
+
+  font-size: 1.25rem;
+  line-height: 2rem;
+  color: #fff;
+  cursor: pointer;
+}
+button.room-button::before {
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 1000px;
+  top: -0.1em;
+  bottom: -0.1em;
+  right: -0.1em;
+  left: -0.1em;
+  z-index: -1;
+  background: linear-gradient(240deg, #f422db 0%, #601dff 20%, #343434 100%);
+  background-size: 140%;
+  background-position: 100% 100%;
+  transition: background 0.3s;
+}
+
+button.room-button:hover::before {
+  background-position: 100% 0;
+}
+
+button:not([disabled]) {
+  background-color: black;
+  color: white;
+}
+
+.custom-room-input {
+  background-color: rgba(217, 217, 217, 0.2);
+  outline: none;
+  border: 1.65625px solid #b0b0b0;
+  border-radius: 12px;
+  border: 2px solid;
+}
+
+.box {
+  /* set position and size of box */
+  position: absolute;
+  left: 0%;
+  right: 0;
+  top: 75%;
+  bottom: 0;
+  margin: auto;
+  width: 8%;
+  height: 5%;
+  /* set box styles */
+  box-sizing: border-box;
+  background: #6a6a6a;
+  border: 1.65625px solid #b0b0b0;
+  border-radius: 43.4766px;
+  /* set box content to center */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 1000px;
+}
+
+.box::before {
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 43.4766px;
+  top: -0.1em;
+  bottom: -0.1em;
+  right: -0.1em;
+  left: -0.1em;
+  z-index: -1;
+  background: linear-gradient(360deg, #f422db 0%, #601dff 20%, #343434 100%);
+  background-size: 140%;
+  background-position: 100% 100%;
+  transition: background 0.3s;
+}

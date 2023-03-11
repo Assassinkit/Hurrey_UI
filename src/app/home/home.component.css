@@ -1,0 +1,68 @@
+.container {
+
+    position: relative;
+    left: -10%;
+  }
+  
+  .rectangle27 {
+    box-sizing: border-box;
+    position: absolute;
+    left: 380px;
+    right: 25%;
+    top: 160px;
+    bottom: 356px;
+    background: #000000;
+    border-radius: 52.5px;
+    animation: zoomInOut 4s infinite;
+    animation-direction: alternate;
+  }
+  
+  .logo {
+    animation: zoomInOut 4s infinite;
+    animation-direction: alternate;
+  }
+  
+  .logo img {
+    position: absolute;
+    left: 585px;
+    right: 724px;
+    top: 245px;
+    bottom: 455.5px;
+  }
+  
+  @keyframes zoomInOut {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  .next-page {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    color: #fff;
+    background-color: #333;
+    padding: 10px 20px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    opacity: 0;
+  }
+  
+  .next-page.show {
+    opacity: 1;
+  }
+  
+  .next-page:hover {
+    background-color: #555;
+  }
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
+  

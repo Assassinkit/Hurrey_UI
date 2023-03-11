@@ -1,0 +1,90 @@
+.text-white {
+  font-family: 'Neue Haas Grotesk Display Pro';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 60px;
+  line-height: 72px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.01em;
+  margin-left: 38%;
+}
+
+.text-avatar {
+
+
+font-family: 'Neue Haas Grotesk Display Pro';
+font-style: normal;
+font-weight: 450;
+font-size: 40px;
+line-height: 46px;
+display: flex;
+align-items: center;
+text-align: center;
+letter-spacing: 0.01em;
+margin-left: 40%;
+margin-bottom: 2%;
+color: #FFFFFF;
+}
+
+.avatar-rounded {
+  width: 170px;
+  height: 170px;
+  background-color: lightgray;
+  border-radius: 50%;
+  border: 1px solid red;
+}
+.custom-btn {
+  border: 1px solid black;
+  border-radius: 30px;
+}
+.avatar-rounded:hover {
+  background-color: gray;
+  cursor: pointer;
+}
+
+.box {
+  /* set position and size of box */
+  position: absolute;
+  left: 0%;
+  right: 0;
+  top: 55%;
+  bottom: 0;
+  margin: auto;
+  width: 8%;
+  height: 5%;
+  /* set box styles */
+  box-sizing: border-box;
+  background: #6a6a6a;
+  border: 1.65625px solid #b0b0b0;
+  border-radius: 43.4766px;
+  /* set box content to center */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 1000px;
+}
+
+.box::before {
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 43.4766px;
+  top: -0.1em;
+  bottom: -0.1em;
+  right: -0.1em;
+  left: -0.1em;
+  z-index: -1;
+  background: linear-gradient(360deg, #f422db 0%, #601dff 20%, #343434 100%);
+  background-size: 140%;
+  background-position: 100% 100%;
+  transition: background 0.3s;
+}
+
+button:not([disabled]) {
+  background-color: black;
+  color: white;
+}

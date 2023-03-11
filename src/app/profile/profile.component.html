@@ -1,0 +1,17 @@
+<div class="container-fluid vh-100 text-center">
+  <div class="row vh-100 align-items-center justify-content-center">
+    <div class="col">
+      <form [formGroup]="nameFormGroup">
+        <div>
+          <h1 class="text-white"> What is your name? </h1>
+        </div>
+        <div>
+          <input style="color: #ffffff;" formControlName="name" type="text" class="custom-room-input px-3 py-2" placeholder="-Type here-">
+        </div>
+        <div>
+          <button class="box" color="primary" [disabled]="!nameFormGroup.valid" (click)="submit()">Next</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

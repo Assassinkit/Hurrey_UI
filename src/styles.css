@@ -1,0 +1,53 @@
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background-color: #000000;
+  height: 100%;
+  width: 100%;
+  background-image: url("./assets/Vector.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.box {
+  background: #3a3a3a;
+  border: 1.65625px solid #b0b0b0;
+  border-radius: 43.4766px;
+}
+.input-box {
+  /* set position and size of box */
+  position: absolute;
+  left: 0%;
+  right: 75%;
+  top: 0%;
+  bottom: 0%;
+  margin: auto;
+  width: 42%;
+  height: 65%;
+  /* set box styles */
+  box-sizing: border-box;
+  background:  rgba(217, 217, 217, 0.2);
+  border: 1.65625px solid #b0b0b0;
+  border-radius: 12px;
+  /* to set color to the border */
+  border: 2px solid;
+  border-color: linear-gradient(to right, rgba(123, 114, 204, 1), rgba(220, 0, 120, 1), rgba(56, 113, 214, 1)) 1;
+  border-image-slice: 100%;
+  /* set box content to center */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.custom-room-input{
+  background-color:rgba(217, 217, 217, 0.2);
+  outline: none;
+  border: 2px solid #b0b0b0;
+  border-radius: 12px;
+}
+
+

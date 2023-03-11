@@ -1,0 +1,30 @@
+<div class="container-fluid vh-100 text-center">
+    <div class="row vh-100 align-items-center">
+        <div class="col">
+            <div>
+                <h1 class="text-white">Hello {{ name }}!</h1>
+            </div>
+            <h4 class="text-avatar">Choose your avatar</h4>
+            <div class="d-flex align-items-center justify-content-center">
+                <div [ngClass]="avatar === 'Avatar 1.png' ? 'bg-dark' : 'avatar-rounded mx-1'" class="avatar-rounded mx-1" (click)="onAvatarSelection('Avatar 1.png')">
+                    <img src="../../assets/Avatar 1.png" class="img-fluid" alt="">
+                </div>
+                <div [ngClass]="avatar === 'Avatar 2.png' ? 'bg-dark' : 'avatar-rounded mx-1'" class="avatar-rounded mx-1" (click)="onAvatarSelection('Avatar 2.png')">
+                    <img src="../../assets/Avatar 2.png" class="img-fluid" alt="">
+                </div>
+                <div [ngClass]="avatar === 'Avatar 3.png' ? 'bg-dark' : 'avatar-rounded mx-1'" class="avatar-rounded mx-1" (click)="onAvatarSelection('Avatar 3.png')">
+                    <img src="../../assets/Avatar 3.png" class="img-fluid" alt="">
+                </div>
+                <div [ngClass]="avatar === 'Avatar 4.png' ? 'bg-dark' : 'avatar-rounded mx-1'" class="avatar-rounded mx-1" (click)="onAvatarSelection('Avatar 4.png')">
+                    <img src="../../assets/Avatar 4.png" class="img-fluid" alt="">
+                </div>
+                <div [ngClass]="avatar === 'Avatar 5.png' ? 'bg-dark' : 'avatar-rounded mx-1'" class="avatar-rounded mx-1" (click)="onAvatarSelection('Avatar 5.png')">
+                    <img src="../../assets/Avatar 5.png" class="img-fluid" alt="">
+                </div>
+            </div>
+            <div class="my-1">
+                <button class="box" color="primary" [disabled]="!avatar" (click)="submit()">Next</button>
+            </div>
+        </div>
+    </div>
+</div>

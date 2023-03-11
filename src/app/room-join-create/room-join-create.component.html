@@ -1,0 +1,53 @@
+<div class="container-fluid vh-100 text-center">
+    <div class="row vh-100 align-items-center">
+        <div class="col">
+            <div class="d-flex justify-content-center align-items-center">
+                <div class="avatar-rounded mx-1">
+                    <img [src]="avatar" class="img-fluid" alt="">
+                </div>
+                <div class="text-white mx-1" >
+                    <h2 style="font-family: 'Neue Haas Grotesk Display Pro'; font-style: normal; font-weight: 500; font-size: 30px;">{{ name }}</h2>
+                </div>
+            </div>
+            <section *ngIf="!action">
+                <div class="my-3">
+                    <button class="room-button mx-auto" (click)="joinCreate('join')">Join a Room</button>
+                </div>
+                <div class="my-3">
+                    <button class="room-button mx-auto" (click)="joinCreate('create')">Create a Room</button>
+                </div>
+            </section>
+            <section class="mt-2 text-white" *ngIf="action === 'join'">
+                <form [formGroup]="joinRoomForm" (ngSubmit)="joinRoom()">
+                    <!-- After clicking on Join a Room, Enter the Room ID -->
+                    <label class="my-2" for="roomid" style="font-family: 'Neue Haas Grotesk Display Pro'; font-style: normal; font-weight: 500; font-size: 40px; line-height: 48px;">Type room code below</label>
+                    <br>
+                    <input style="color: #FFFFFF; margin-top: 25px; margin-bottom: 15px;" formControlName="roomid" type="text" class="custom-room-input px-3 py-2" placeholder="-Type here-"required maxlength="6" (keypress)="onKeyPress($event)" />
+                    <br>
+
+                    <label class="my-2" for="roomid" style="font-family: 'Neue Haas Grotesk Display Pro'; font-style: normal; font-weight: 500; font-size: 40px; line-height: 48px; margin-top: 25px;">Enter Your Card Number</label>
+                    <br>
+                    <input style="color: #FFFFFF; margin-top: 25px; margin-bottom: 15px;" formControlName="cardNumber" type="text" class="custom-room-input px-3 py-2" placeholder="Debit Card No." maxlength="19" 
+                    (keypress)="onKeyPress($event)" 
+                    (keydown)="onKeyDown($event)"
+                    />
+                    <br>
+                    <button type="submit" class="box mt-15 px-3 py-2 " [disabled]="joinRoomForm.value.roomid.length === 0">Join</button>
+                </form>
+            </section>
+            <section class="mt-2 text-white" *ngIf="action === 'create'">
+                <form [formGroup]="createRoomForm" (ngSubmit)="createRoom()">
+                    <label class="my-2" for="roomname" style="font-family: 'Neue Haas Grotesk Display Pro'; font-style: normal; font-weight: 500; font-size: 40px; line-height: 48px; margin-top: 25px;">Room Name</label>
+                    <br>
+                    <input style="color: #FFFFFF;" formControlName="roomname" type="text" class="custom-room-input px-3 py-2" placeholder="Room Name" required maxlength="10">
+                    <br>
+                    <label class="my-2" for="roomname" style="font-family: 'Neue Haas Grotesk Display Pro'; font-style: normal; font-weight: 500; font-size: 40px; line-height: 48px; margin-top: 25px;">No of players</label>
+                    <br>
+                    <input style="color: #FFFFFF;" formControlName="players" type="text" class="custom-room-input px-3 py-2" required maxlength="1" placeholder="Players" (keypress)="onKeyPress($event)">
+                    <br>
+                    <button type="submit" class="box mt-2 px-3 py-2" [disabled]="!createRoomForm.valid">Create</button>
+                </form>
+            </section>
+        </div>
+    </div>
+</div>
