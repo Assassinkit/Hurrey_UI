@@ -1,0 +1,64 @@
+.text-white {
+  font-family: "Neue Haas Grotesk Display Pro";
+  font-style: normal;
+  font-weight: 450;
+  font-size: 40px;
+  line-height: 46px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.01em;
+  margin-left: 40%;
+}
+
+.custom-room-input {
+  color: #ffffff;
+  border: 4px solid;
+  border-image: linear-gradient(360deg, #7B72CC 0%, #DC0078 20%, #3871D6 100%);
+  border-image-slice: 1;
+  border-radius: 12px;
+  background: rgba(217, 217, 217, 0.2);
+  width: 479px;
+  height: 55px;
+}
+
+.box {
+  position: absolute;
+  left: 0%;
+  right: 0;
+  top: 30%;
+  bottom: 0;
+  margin: auto;
+  width: 8%;
+  height: 5%;
+  box-sizing: border-box;
+  background: #6a6a6a;
+  border: 1.65625px solid #b0b0b0;
+  border-radius: 43.4766px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 1000px;
+}
+
+.box::before {
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 43.4766px;
+  top: -0.1em;
+  bottom: -0.1em;
+  right: -0.1em;
+  left: -0.1em;
+  z-index: -1;
+  background: linear-gradient(360deg, #7B72CC 0%, #DC0078 20%, #3871D6 100%);
+  background-size: 140%;
+  background-position: 100% 100%;
+  transition: background 0.3s;
+}
+
+button:not([disabled]) {
+  background-color: black;
+  color: white;
+}
